@@ -6,13 +6,14 @@ project(CapsLockLanguageSwitcher)
 
 # Create the executable file
 # The "WIN32" keyword means creating a GUI application without a console window.
-add_executable(CapsLockLanguageSwitcher WIN32 
-    main.cpp 
+add_executable(CapsLockLanguageSwitcher WIN32
+    main.cpp
     resource.rc
     lang/kr.cpp
     lang/ja.cpp
     lang/en_us.cpp
- "lang/switch.cpp" "lang/switch.h")
+    lang/switch.cpp
+)
 
 # Add compiler definitions for Unicode build
 target_compile_definitions(CapsLockLanguageSwitcher PRIVATE UNICODE _UNICODE)

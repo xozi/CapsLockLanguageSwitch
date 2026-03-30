@@ -44,7 +44,7 @@ DWORD IME_State() {
     if (hImeWnd == NULL) return MAXDWORD;
     //Check if IME is open
     if (SendMessage(hImeWnd, WM_IME_CONTROL, 0x0005, 0) != 0) {
-        return SendMessage(hImeWnd, WM_IME_CONTROL, IMC_GETCONVERSIONMODE, 0);
+        return  static_cast<DWORD>(SendMessage(hImeWnd, WM_IME_CONTROL, IMC_GETCONVERSIONMODE, 0));
     }
     else {
 		return MAXDWORD;
