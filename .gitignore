@@ -1,0 +1,10 @@
+# Build outputs and temporary files
+/build/
+*.exe
+*.obj
+*.res
+/out
+
+# VS Code/Visual Studio configuration files
+.vscode/
+.vs 
